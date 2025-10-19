@@ -1,14 +1,30 @@
-[gd_scene load_steps=10 format=3 uid="uid://8defva8xfqpr"]
+[gd_scene load_steps=17 format=3 uid="uid://8defva8xfqpr"]
 
 [ext_resource type="Script" uid="uid://3a7xk8n12ld4" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://dh5nau7a3vd5k" path="res://building_grid_square.tscn" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dhust1rr2kqua" path="res://part_selector_button.tscn" id="3_kek77"]
-[ext_resource type="Texture2D" uid="uid://e87n30w7mp2k" path="res://block.png" id="4_4c57u"]
-[ext_resource type="Texture2D" uid="uid://b3lghlsfwhus5" path="res://block-pressed.png" id="5_efxa6"]
-[ext_resource type="Texture2D" uid="uid://bvtgfe8er3jbr" path="res://block-hovered.png" id="6_dg77c"]
-[ext_resource type="Texture2D" uid="uid://cpieyh1n28x07" path="res://wheel.png" id="7_ycdy4"]
-[ext_resource type="Texture2D" uid="uid://bqjx63wqeyrxs" path="res://wheel-pressed.png" id="8_w48qg"]
-[ext_resource type="Texture2D" uid="uid://dihmto6tj7b8b" path="res://wheel-hovered.png" id="9_vivmo"]
+[ext_resource type="PackedScene" uid="uid://d2amxmdibf7xl" path="res://vehicle.tscn" id="3_w48qg"]
+[ext_resource type="Texture2D" uid="uid://dyfds4gkmmcri" path="res://box.png" id="4_kek77"]
+[ext_resource type="Texture2D" uid="uid://dkydfdbxjj5d0" path="res://nowwhattheheckisthis.png" id="6_efxa6"]
+[ext_resource type="PackedScene" uid="uid://bed5apshwwymh" path="res://framedwheel.tscn" id="6_kek77"]
+[ext_resource type="PackedScene" uid="uid://sbdcievvkpvw" path="res://andersen.tscn" id="7_dg77c"]
+[ext_resource type="PackedScene" uid="uid://dxgvm6ckhj022" path="res://block.tscn" id="7_efxa6"]
+[ext_resource type="Texture2D" uid="uid://dcfc4u83f2bfk" path="res://square.png" id="12_dg77c"]
+[ext_resource type="Script" uid="uid://dxq0610qlm2by" path="res://terrain.gd" id="12_ycdy4"]
+[ext_resource type="Texture2D" uid="uid://b6fy711gpae7w" path="res://icon.svg" id="13_ycdy4"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4c57u"]
+load_path = "res://.godot/imported/wheel.png-38930538759529989e357ad5e7dc5614.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_efxa6"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dg77c"]
+
+[sub_resource type="Curve2D" id="Curve2D_4c57u"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -28.98114, 1275, 0, 0, 0, 0, -1162.0253, 1278, 0, 0, 0, 0, -1176.063, -492, 0, 0, 0, 0, -123.23436, -471, 0, 0, 0, 0, -44, 194, -35.018494, -15.827568, 35.018494, 15.827568, 45, 605, 0, 0, 0, 0, 133, 620, 0, 0, 0, 0, 374, 616, 0, 0, 0, 0, 615, 613, -27.710533, 1.539474, 27.710533, -1.539474, 794, 606, -61.311283, 8.822571, 61.311283, -8.822571, 964, 590, -28.82912, 10.324635, 28.82912, -10.324635, 1134, 558, -49.609573, 25.713291, 49.609573, -25.713291, 1262, 496, -77.7459, 26.446352, 77.7459, -26.446352, 1429, 423, -109.92761, 36.323906, 109.92761, -36.323906, 1633, 343, -95.517395, 0.23939197, 95.517395, -0.23939197, 1860, 310, -107.296684, -39.865173, 107.296684, 39.865173, 2181, 343, -78.88215, -3.816878, 78.88215, 3.816878, 2429, 416, -48.096024, 15.669292, 48.096024, -15.669292, 2566, 401, -49.837055, 16.975067, 49.837055, -16.975067, 2716, 343, -42.001324, 2.6069787, 42.001324, -2.6069787, 2978, 299, -39.712494, 2.4534564, 39.712494, -2.4534564, 3243.8118, 222, -67.4048, -62.09212, 67.4048, 62.09212, 3346.0864, 458, 0, 0, 0, 0, 3527.574, 506, -36.53237, 27.710533, 36.53237, -27.710533, 3698.032, 480, -70.49204, 3.078948, 70.49204, -3.078948, 3780.253, 313, -100.18103, -12.418424, 100.18103, 12.418424, 4035.94, 401, -48.624588, 21.85643, 48.624588, -21.85643, 4317.697, 354, -14.381921, 50.542995, 14.381921, -50.542995, 4515.2275, 178, 46.071953, 74.51055, -46.071953, -74.51055, 4514.225, -2, 41.713795, 50.915543, -41.713795, -50.915543, 4380.8667, -129, 0, 0, 0, 0, 4243.4976, -455, 0, 0, 0, 0, 5119.852, -479, 0, 0, 0, 0, 5133.8896, 1282, 0, 0, 0, 0, 1619.4476, 1255, 0, 0, 0, 0, 502.4466, 1272, 0, 0, 0, 0, -7.924568, 1276, 0, 0, 0, 0, -28.98114, 1275)
+}
+point_count = 38
 
 [node name="Main" type="Node"]
 script = ExtResource("1_0xm2m")
@@ -17,22 +33,77 @@ building_grid_square = ExtResource("2_h2yge")
 [node name="BuildingGrid" type="Node" parent="."]
 
 [node name="BlockSelector" parent="." instance=ExtResource("3_kek77")]
-offset_left = 321.0
-offset_top = 541.0
-offset_right = 361.0
-offset_bottom = 581.0
-texture_normal = ExtResource("4_4c57u")
-texture_pressed = ExtResource("5_efxa6")
-texture_hover = ExtResource("6_dg77c")
+offset_left = 330.0
+offset_top = 520.0
+offset_right = 390.0
+offset_bottom = 580.0
+texture_normal = ExtResource("4_kek77")
+texture_pressed = ExtResource("4_kek77")
+texture_hover = ExtResource("4_kek77")
+selected_part_scene = ExtResource("7_efxa6")
+remaining = 420
+
+[node name="AndersenSelector" parent="." instance=ExtResource("3_kek77")]
+offset_left = 258.0
+offset_top = 520.0
+offset_right = 318.0
+offset_bottom = 580.0
+texture_normal = ExtResource("6_efxa6")
+texture_pressed = ExtResource("6_efxa6")
+texture_hover = ExtResource("6_efxa6")
+ignore_texture_size = true
+selected_part_scene = ExtResource("7_dg77c")
+remaining = 1
 
 [node name="WheelSelector" parent="." instance=ExtResource("3_kek77")]
-offset_left = 367.0
-offset_top = 541.0
-offset_right = 407.0
-offset_bottom = 581.0
-texture_normal = ExtResource("7_ycdy4")
-texture_pressed = ExtResource("8_w48qg")
-texture_hover = ExtResource("9_vivmo")
+offset_left = 402.0
+offset_top = 520.0
+offset_right = 462.0
+offset_bottom = 580.0
+texture_normal = SubResource("CompressedTexture2D_4c57u")
+texture_pressed = SubResource("CompressedTexture2D_efxa6")
+texture_hover = SubResource("CompressedTexture2D_dg77c")
+selected_part_scene = ExtResource("6_kek77")
+remaining = 69
+
+[node name="EmptySelector" parent="." instance=ExtResource("3_kek77")]
+offset_left = 186.0
+offset_top = 520.0
+offset_right = 246.0
+offset_bottom = 580.0
+texture_normal = ExtResource("12_dg77c")
+texture_pressed = ExtResource("12_dg77c")
+texture_hover = ExtResource("12_dg77c")
+
+[node name="PlayButton" type="TextureButton" parent="."]
+offset_left = 985.0
+offset_top = 366.0
+offset_right = 1113.0
+offset_bottom = 494.0
+texture_normal = ExtResource("13_ycdy4")
+
+[node name="Vehicle" parent="." instance=ExtResource("3_w48qg")]
+
+[node name="Terrain" type="StaticBody2D" parent="."]
+modulate = Color(0.18431373, 0.42745098, 0.20784314, 1)
+top_level = true
+scale = Vector2(0.9973133, 1)
+script = ExtResource("12_ycdy4")
+
+[node name="Line2D" type="Line2D" parent="Terrain"]
+
+[node name="Polygon2D" type="Polygon2D" parent="Terrain"]
+scale = Vector2(0.9991228, 1)
+color = Color(0.18309635, 0.42860883, 0.20957121, 1)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Terrain"]
+
+[node name="Path2D" type="Path2D" parent="Terrain"]
+position = Vector2(36, -11)
+curve = SubResource("Curve2D_4c57u")
 
 [connection signal="part_selected" from="BlockSelector" to="." method="_on_part_selected"]
+[connection signal="part_selected" from="AndersenSelector" to="." method="_on_part_selected"]
 [connection signal="part_selected" from="WheelSelector" to="." method="_on_part_selected"]
+[connection signal="part_selected" from="EmptySelector" to="." method="_on_part_selected"]
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]

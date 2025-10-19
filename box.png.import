@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqjx63wqeyrxs"
-path="res://.godot/imported/wheel-pressed.png-d9171228e5952eb09b300482b54fdfd6.ctex"
+uid="uid://dyfds4gkmmcri"
+path="res://.godot/imported/box.png-196cb2b6d7422a4ab3b9c60b5a994fe3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://wheel-pressed.png"
-dest_files=["res://.godot/imported/wheel-pressed.png-d9171228e5952eb09b300482b54fdfd6.ctex"]
+source_file="res://box.png"
+dest_files=["res://.godot/imported/box.png-196cb2b6d7422a4ab3b9c60b5a994fe3.ctex"]
 
 [params]
 

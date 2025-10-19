@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://e87n30w7mp2k"
-path="res://.godot/imported/block.png-b7fed0a755ada244f74f9622a987e81f.ctex"
+uid="uid://bcp0w2n3gkeod"
+path="res://.godot/imported/wheelframe.png-895319293c3a93dd2c4220c9170afb75.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://block.png"
-dest_files=["res://.godot/imported/block.png-b7fed0a755ada244f74f9622a987e81f.ctex"]
+source_file="res://wheelframe.png"
+dest_files=["res://.godot/imported/wheelframe.png-895319293c3a93dd2c4220c9170afb75.ctex"]
 
 [params]
 

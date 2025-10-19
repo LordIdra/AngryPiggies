@@ -1,8 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://dxgvm6ckhj022"]
+[gd_scene load_steps=4 format=3 uid="uid://dxgvm6ckhj022"]
 
-[ext_resource type="Texture2D" uid="uid://e87n30w7mp2k" path="res://block.png" id="1_im0tn"]
+[ext_resource type="Texture2D" uid="uid://dyfds4gkmmcri" path="res://box.png" id="1_im0tn"]
+[ext_resource type="Script" uid="uid://b1xhj52y7jcyf" path="res://block.gd" id="1_xfwl5"]
 
-[node name="Block" type="Area2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_im0tn"]
+
+[node name="Block" type="RigidBody2D"]
+mass = 0.1
+freeze = true
+script = ExtResource("1_xfwl5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
 texture = ExtResource("1_im0tn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(3.1, 3.1)
+shape = SubResource("RectangleShape2D_im0tn")

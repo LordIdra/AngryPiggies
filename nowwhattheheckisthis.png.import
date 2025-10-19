@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dihmto6tj7b8b"
-path="res://.godot/imported/wheel-hovered.png-47aab609fd753a7b810d2093790bc649.ctex"
+uid="uid://dkydfdbxjj5d0"
+path="res://.godot/imported/nowwhattheheckisthis.png-44331cffe256223a425c535f3f748894.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://wheel-hovered.png"
-dest_files=["res://.godot/imported/wheel-hovered.png-47aab609fd753a7b810d2093790bc649.ctex"]
+source_file="res://nowwhattheheckisthis.png"
+dest_files=["res://.godot/imported/nowwhattheheckisthis.png-44331cffe256223a425c535f3f748894.ctex"]
 
 [params]
 

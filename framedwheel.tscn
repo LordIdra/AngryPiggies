@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://bed5apshwwymh"]
+
+[ext_resource type="Script" uid="uid://bpex3eyrn77q0" path="res://framedwheel.gd" id="1_fhi7c"]
+[ext_resource type="Texture2D" uid="uid://bcp0w2n3gkeod" path="res://wheelframe.png" id="1_qdmhe"]
+[ext_resource type="Texture2D" uid="uid://ctfwesspr0iy" path="res://wheel.png" id="2_7iwpa"]
+[ext_resource type="Script" uid="uid://c3c5pwjs4l2j0" path="res://wheel.gd" id="2_n6kxe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qdmhe"]
+size = Vector2(64, 32)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7iwpa"]
+radius = 30.04643
+
+[node name="FramedWheel" type="RigidBody2D"]
+scale = Vector2(0.99175376, 1.0706445)
+mass = 0.1
+freeze = true
+script = ExtResource("1_fhi7c")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+scale = Vector2(4, 4)
+texture = ExtResource("1_qdmhe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -16)
+scale = Vector2(0.99, 0.99)
+shape = SubResource("RectangleShape2D_qdmhe")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+rotation = 3.1415927
+scale = Vector2(0.7718467, -0.75253254)
+node_a = NodePath("..")
+node_b = NodePath("Wheel")
+
+[node name="Wheel" type="RigidBody2D" parent="PinJoint2D"]
+angular_damp = 2.203
+script = ExtResource("2_n6kxe")
+
+[node name="Sprite2D" type="Sprite2D" parent="PinJoint2D/Wheel"]
+scale = Vector2(4, 4)
+texture = ExtResource("2_7iwpa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PinJoint2D/Wheel"]
+shape = SubResource("CircleShape2D_7iwpa")

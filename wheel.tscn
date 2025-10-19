@@ -1,8 +1,35 @@
-[gd_scene load_steps=2 format=3 uid="uid://bx47nbfxqimdv"]
+[gd_scene load_steps=5 format=3 uid="uid://db86u8kj0m3ov"]
 
-[ext_resource type="Texture2D" uid="uid://cpieyh1n28x07" path="res://wheel.png" id="1_8m8ww"]
+[ext_resource type="Texture2D" uid="uid://ctfwesspr0iy" path="res://wheel.png" id="2_u5up5"]
 
-[node name="Block" type="Area2D"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_y7iat"]
+
+[sub_resource type="GDScript" id="GDScript_8m8ww"]
+script/source = "extends RigidBody2D
+
+var wheel = self
+var speed = 12000
+
+func _process(delta: float):
+	if Input.is_action_pressed(\"ui_right\"):
+		wheel.apply_torque_impulse(speed * delta * 60)
+	elif Input.is_action_pressed(\"ui_left\"):
+		wheel.apply_torque_impulse(-speed * delta * 60)
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u5up5"]
+radius = 7.0
+
+[node name="Wheel" type="RigidBody2D"]
+z_index = 5
+position = Vector2(0, 2.842171e-14)
+scale = Vector2(3, 3)
+physics_material_override = SubResource("PhysicsMaterial_y7iat")
+script = SubResource("GDScript_8m8ww")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_8m8ww")
+position = Vector2(0, 5.684342e-14)
+texture = ExtResource("2_u5up5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_u5up5")

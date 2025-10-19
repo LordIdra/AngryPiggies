@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://c1kuw3daaibia"]
+
+[node name="BlockConnector" type="GrooveJoint2D"]
+disable_collision = false
+length = 15.0
