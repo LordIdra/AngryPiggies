@@ -1,0 +1,38 @@
+[gd_scene load_steps=10 format=3 uid="uid://8defva8xfqpr"]
+
+[ext_resource type="Script" uid="uid://3a7xk8n12ld4" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://dh5nau7a3vd5k" path="res://building_grid_square.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dhust1rr2kqua" path="res://part_selector_button.tscn" id="3_kek77"]
+[ext_resource type="Texture2D" uid="uid://e87n30w7mp2k" path="res://block.png" id="4_4c57u"]
+[ext_resource type="Texture2D" uid="uid://b3lghlsfwhus5" path="res://block-pressed.png" id="5_efxa6"]
+[ext_resource type="Texture2D" uid="uid://bvtgfe8er3jbr" path="res://block-hovered.png" id="6_dg77c"]
+[ext_resource type="Texture2D" uid="uid://cpieyh1n28x07" path="res://wheel.png" id="7_ycdy4"]
+[ext_resource type="Texture2D" uid="uid://bqjx63wqeyrxs" path="res://wheel-pressed.png" id="8_w48qg"]
+[ext_resource type="Texture2D" uid="uid://dihmto6tj7b8b" path="res://wheel-hovered.png" id="9_vivmo"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_0xm2m")
+building_grid_square = ExtResource("2_h2yge")
+
+[node name="BuildingGrid" type="Node" parent="."]
+
+[node name="BlockSelector" parent="." instance=ExtResource("3_kek77")]
+offset_left = 321.0
+offset_top = 541.0
+offset_right = 361.0
+offset_bottom = 581.0
+texture_normal = ExtResource("4_4c57u")
+texture_pressed = ExtResource("5_efxa6")
+texture_hover = ExtResource("6_dg77c")
+
+[node name="WheelSelector" parent="." instance=ExtResource("3_kek77")]
+offset_left = 367.0
+offset_top = 541.0
+offset_right = 407.0
+offset_bottom = 581.0
+texture_normal = ExtResource("7_ycdy4")
+texture_pressed = ExtResource("8_w48qg")
+texture_hover = ExtResource("9_vivmo")
+
+[connection signal="part_selected" from="BlockSelector" to="." method="_on_part_selected"]
+[connection signal="part_selected" from="WheelSelector" to="." method="_on_part_selected"]

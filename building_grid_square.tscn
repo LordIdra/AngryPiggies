@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dh5nau7a3vd5k"]
+
+[ext_resource type="Texture2D" uid="uid://bjdki3k5o10qg" path="res://square.png" id="1_e3s8e"]
+[ext_resource type="Script" uid="uid://hp8mdu88vsw8" path="res://building_grid_square.gd" id="2_6stwu"]
+
+[node name="BuildingGridSquare" type="TextureButton"]
+scale = Vector2(4, 4)
+texture_normal = ExtResource("1_e3s8e")
+texture_pressed = ExtResource("1_e3s8e")
+texture_hover = ExtResource("1_e3s8e")
+script = ExtResource("2_6stwu")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 15.0
+offset_bottom = 15.0
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

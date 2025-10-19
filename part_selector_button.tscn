@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhust1rr2kqua"]
+
+[ext_resource type="Script" uid="uid://bay31y86fvh6u" path="res://part_selector_button.gd" id="1_84t77"]
+
+[node name="PartSelectorButton" type="TextureButton"]
+offset_right = 40.0
+offset_bottom = 40.0
+stretch_mode = 0
+script = ExtResource("1_84t77")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
